@@ -312,7 +312,7 @@ header h2 {
     </header>  
 
     <div class="villa">  
-    <img src="kayu_hujung/IMG_4593.jpg" alt="Villa Kayu Hujung" data-aos="zoom-in-up">  
+    <img src="kayu_hujung/IMG_4593.jpg" alt="Villa Kayu Hujung" data-aos="zoom-out">  
         <p data-aos="fade-left">Villa Kayu Hujung merupakan villa dengan fasilitas yang lumayan lengkap, Villa ini juga memiliki 
 pemandangan indah Danau Situ Lengkong, terdapat area permainan billiard, dan gathering area 
 baik outdoor maupun indoor. Villa Kayu Hujung merupakan pilihan villa yang tepat untuk dijadikan
