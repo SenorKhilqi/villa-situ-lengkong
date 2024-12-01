@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2024 at 11:42 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Waktu pembuatan: 01 Des 2024 pada 13.21
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bookings`
+-- Struktur dari tabel `bookings`
 --
 
 CREATE TABLE `bookings` (
@@ -37,7 +37,7 @@ CREATE TABLE `bookings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `bookings`
+-- Dumping data untuk tabel `bookings`
 --
 
 INSERT INTO `bookings` (`id`, `user_id`, `villa_id`, `booking_date`, `payment_status`, `payment_method`) VALUES
@@ -70,7 +70,7 @@ INSERT INTO `bookings` (`id`, `user_id`, `villa_id`, `booking_date`, `payment_st
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -81,7 +81,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
@@ -98,7 +98,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `villas`
+-- Struktur dari tabel `villas`
 --
 
 CREATE TABLE `villas` (
@@ -109,7 +109,7 @@ CREATE TABLE `villas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `villas`
+-- Dumping data untuk tabel `villas`
 --
 
 INSERT INTO `villas` (`id`, `name`, `price`, `image`) VALUES
@@ -121,7 +121,7 @@ INSERT INTO `villas` (`id`, `name`, `price`, `image`) VALUES
 --
 
 --
--- Indexes for table `bookings`
+-- Indeks untuk tabel `bookings`
 --
 ALTER TABLE `bookings`
   ADD PRIMARY KEY (`id`),
@@ -129,46 +129,46 @@ ALTER TABLE `bookings`
   ADD KEY `villa_id` (`villa_id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indexes for table `villas`
+-- Indeks untuk tabel `villas`
 --
 ALTER TABLE `villas`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `bookings`
+-- AUTO_INCREMENT untuk tabel `bookings`
 --
 ALTER TABLE `bookings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `villas`
+-- AUTO_INCREMENT untuk tabel `villas`
 --
 ALTER TABLE `villas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `bookings`
+-- Ketidakleluasaan untuk tabel `bookings`
 --
 ALTER TABLE `bookings`
   ADD CONSTRAINT `bookings_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
